@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType, size }) {
   const toppings = (t) => {
     switch (t) {
@@ -26,17 +28,19 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
   return (
     <div className="bg-white flex ring-2 ring-inset h-64 mb-5 ring-gray-200 rounded-lg">
       {/* LEFT */}
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col ">
         <h2 className="py-2 px-6 text-xl border-b-2 h-12 font-semibold">
           {name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}
         </h2>
-        <div className="flex">
-          <img className="w-44 h-44 object-cover m-4" src={imageUrl} alt="pastel" />
-          <div className="mx-4 flex flex-col justify-evenly">
+        <div className="flex h-full p-4">
+          <div className="flex  w-full h-full">
+            <img width="176px" height="176px" src={imageUrl} alt="pastel" />
+          </div>
+          <div className=" flex flex-col">
             <p className="font-mono text-gray-600 tracking-tighter">
               {description}
             </p>
-            <div className="pb-4">
+            <div className="pt-4">
               <p>
                 <span className="font-bold">Tamaño: </span>
                 {sizes(size)}
@@ -54,7 +58,7 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
 
         <div className="flex mr-[0.1rem]">
           <div className=" flex flex-col items-center">
-            <h2 className="bg-[#EB5E70] w-full text-center cursor-none h-12 items-center justify-center flex  text-white text-sm font-mono">
+            <h2 className="bg-[#EB5E70] w-full text-center h-12 items-center justify-center flex  text-white text-sm font-mono">
               PASTEL
             </h2>
             <div className="m-3 flex flex-col items-center space-y-2">
@@ -69,7 +73,7 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
         </div>
 
         <div className="flex flex-col items-center">
-          <h2 className="cursor-none bg-[#F7AA76] w-full text-center h-12 items-center justify-center flex  max-h-14 min-h-14 rounded-tr-lg text-white text-sm font-mono ">
+          <h2 className="bg-[#F7AA76] w-full text-center h-12 items-center justify-center flex  max-h-14 min-h-14 rounded-tr-lg text-white text-sm font-mono ">
             PAQUETE
           </h2>
           <div className="m-3 flex flex-col items-center space-y-2">
@@ -87,4 +91,4 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
   )
 }
 
-export default CakeCard
+export default  CakeCard 
