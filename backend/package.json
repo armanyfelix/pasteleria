@@ -1,0 +1,24 @@
+{
+  "name": "mi_pasteleria",
+  "version": "1.0.0",
+  "description": "Mi pasteleria, tienda de pasteles helados y galletas",
+  "main": "server.js",
+  "repository": "https://github.com/armanyfelix/pasteleria",
+  "author": "Armany Felix",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js ",
+    "client": "npm start --prefix ../frontend",
+    "data:import": "node seeder.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

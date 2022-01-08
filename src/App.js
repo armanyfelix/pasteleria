@@ -1,15 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import Pasteles from './pasteles';
+import Pasteles from './screens/pastelesScreen';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
       <Navbar />
-      <Pasteles/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Pasteles />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,37 +1,41 @@
 import mi_pasteleria from './mi_pasteleria.svg';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
+
+  const location = useLocation();
+
   return (
     <div className="bg-navbar text-white flex justify-between px-16 py-5">
       <div className="flex items-center">
         <img src={mi_pasteleria} alt="mi_pasteleria" />
       </div>
-      <ul className="flex items-center text-lg font-mono">
-        <li className="mr-4">
-          <a href="/">
+      <ul className="flex items-center space-x-4 text-lg font-mono tracking-tight">
+        <Link to="/">
+          <button className={`${location.pathname === '/' && 'text-[#eecac2]'}`}>
             Pasteles
-          </a>
-        </li>
-        <li className="mr-4">
-          <a href="/helados">
+          </button>
+        </Link>
+        <Link to="/helados">
+          <button className={`${location.pathname === '/helados' && 'text-[#eecac2]'}`}>
             Helados
-          </a>
-        </li>
-        <li className="mr-4">
-          <a href="/galletas">
+          </button>
+        </Link>
+        <Link to="/galletas">
+          <button className={`${location.pathname === '/galletas' && 'text-[#eecac2]'}`}>
             Galletas
-          </a>
-        </li>
-        <li className="mr-4">
-          <a href="nosotros">
+          </button>
+        </Link>
+        <Link to="/nosotros">
+          <button className={`${location.pathname === '/nosotros' && 'text-[#eecac2]'}`}>
             Nosotros
-          </a>
-        </li>
-        <li className="mr-4">
-          <a href="sucursales">
+          </button>
+        </Link>
+        <Link to="/sucursales">
+          <button className={`${location.pathname === '/sucursales' && 'text-[#eecac2]'}`}>
             Sucursales
-          </a>
-        </li>
+          </button>
+        </Link>
       </ul>
     </div>
   )
