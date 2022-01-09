@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const DBconection = require('./db');
+const connectDB = require('./db');
 const pastelesRoutes = require('./routes/pastelesRoutes');
 const cors = require("cors");
 
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/pasteles', pastelesRoutes)
 
-DBconection();
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 

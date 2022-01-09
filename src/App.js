@@ -1,7 +1,8 @@
+import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import Pasteles from './screens/pastelesScreen';
+import Cakes from './screens/cakesScreen';
 
 function App() {
   return (
@@ -9,10 +10,14 @@ function App() {
       <Header />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Pasteles />} />
-      </Routes>
-    </Router>
+        <Route path="/" element={
+          <Suspense fallback={<div>Loading... </div>}>
+            <Cakes />
+            </Suspense >
+        } />
+            </Routes>
+          </Router>
   );
 }
 
-export default App;
+        export default App;
