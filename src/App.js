@@ -11,13 +11,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={
-          <Suspense fallback={<div>Loading... </div>}>
+          <Suspense fallback={<div className='text-center font-mono text-2xl mt-32 text-[#caa59d] animate-pulse'>Loading... </div>}>
             <Cakes />
-            </Suspense >
+          </Suspense >
         } />
-            </Routes>
-          </Router>
+      </Routes>
+    </Router>
   );
 }
 
-        export default App;
+export default App;
