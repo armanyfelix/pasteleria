@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div className="bg-header text-white px-12 py-2 flex justify-between">
+    <div className="bg-header text-white px-4 lg:px-36 py-2 flex justify-between">
       <div>
         ENG |
       </div>

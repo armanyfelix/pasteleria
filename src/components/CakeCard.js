@@ -1,4 +1,4 @@
-import { memo } from "react";
+
 
 function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType, size }) {
   const toppings = (t) => {
@@ -26,18 +26,18 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
     }
   }
   return (
-    <div className="bg-white flex ring-2 ring-inset h-64 mb-5 ring-gray-200 rounded-lg">
+    <div className="bg-white md:flex pb-4 ring-2 ring-inset h-full mb-5 ring-gray-200 rounded-lg">
       {/* LEFT */}
       <div className="flex flex-col ">
         <h2 className="py-2 px-6 text-xl border-b-2 h-12 font-semibold">
           {name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}
         </h2>
-        <div className="flex h-full p-4">
-          <div className="flex  w-full h-full">
+        <div className="md:flex h-full p-4">
+          <div className="flex mb-4 md:mb-0 justify-center w-full h-full">
             <img width="176px" height="176px" src={imageUrl} alt="pastel" />
           </div>
-          <div className=" flex flex-col">
-            <p className="font-mono text-gray-600 tracking-tighter">
+          <div className="flex flex-col">
+            <p className="font-mono pl-1.5 text-gray-600 tracking-tighter">
               {description}
             </p>
             <div className="pt-4">
@@ -54,7 +54,7 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
         </div>
       </div>
       {/* RIGHT */}
-      <div className="flex">
+      <div className="flex justify-center scale-75 sm:scale-100 ">
 
         <div className="flex mr-[0.1rem]">
           <div className=" flex flex-col items-center">
@@ -91,4 +91,4 @@ function CakeCard({ name, imageUrl, price, comboPrice, description, toppingType,
   )
 }
 
-export default  CakeCard 
+export default CakeCard 

@@ -2,13 +2,6 @@ import { atom, selector } from 'recoil';
 import axios from 'axios';
 
 
-
-export const filteredCakesState = atom({
-  key: 'filteredCakesState',
-  default: [],
-});
-
-
 export const allCakesState = selector({
   key: 'allCakesState',
   get: async ({ get }) => {
@@ -22,6 +15,11 @@ export const allCakesState = selector({
       return [];
     }
   }
+});
+
+export const filteredCakesState = atom({
+  key: 'filteredCakesState',
+  default: allCakesState,
 });
 
 
