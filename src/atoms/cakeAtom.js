@@ -15,7 +15,7 @@ export const allCakesState = selector({
   
     // const cakes = get(filteredCakesState);
     try {
-      const res = await axios.get('http://localhost:5000/api/pasteles');
+      const res = await axios.get('https://pasteleriaaxiova-api.herokuapp.com/api/pasteles');
       return res.data || [];
     } catch (error) {
       console.log(error);

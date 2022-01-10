@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Mi pasteleria, tienda de pasteles helados y galletas",
   "main": "server.js",
-  "repository": "https://github.com/armanyfelix/pasteleria",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armanyfelix/pasteleria.git"
+  },
   "author": "Armany Felix",
   "license": "MIT",
   "scripts": {
@@ -20,5 +23,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/armanyfelix/pasteleria/issues"
+  },
+  "homepage": "https://github.com/armanyfelix/pasteleria#readme",
+  "keywords": []
 }
